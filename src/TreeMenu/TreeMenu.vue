@@ -47,7 +47,7 @@ watch(() => props.searchText, (searchText) => searchedItems.value = searchText ?
     v-model:openKeys="openKeys"
     v-bind="{
       ...props,
-      items: searchedItems || items,
+      items: searchText ? searchedItems : items,
     }"
     @click="$emit('click:item', $event)"
   />
