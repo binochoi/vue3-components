@@ -20,7 +20,7 @@ defineEmits<{
   'click:item': [param: MenuInfo];
 }>();
 const selectedKeys = defineModel<string[]>('selectedKeys', { required: true });
-const openKeys = defineModel<string[]>('spreadedFolderKeys', { required: true });
+const openKeys = defineModel<string[]>('spreadedFolderKeys', { default: [] });
 // eslint-disable-next-line vue/no-setup-props-destructure
 const searchedItems = defineModel<MenuItem[]>('searchedItems');
 
