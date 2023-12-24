@@ -1,7 +1,7 @@
 <!--
   # Improved Ant Vue Menu
   ## Features
-  - auto fold & spread if closed all
+  - auto fold & spread navigate if closed all
 -->
 <script lang="ts" setup>
 import { Menu } from 'ant-design-vue';
