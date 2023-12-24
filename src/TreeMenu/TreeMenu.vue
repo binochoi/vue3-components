@@ -7,7 +7,7 @@
 import { Menu } from 'ant-design-vue';
 import { type MenuInfo } from 'ant-design-vue/es/menu/src/interface';
 import { watch } from 'vue';
-import type { Item, Props } from './types';
+import type { MenuItem, Props } from './types';
 import { useTreeMenu } from './useTreeMenu';
 
 const props = withDefaults(
@@ -22,7 +22,7 @@ defineEmits<{
 const selectedKeys = defineModel<string[]>('selectedKeys', { required: true });
 const openKeys = defineModel<string[]>('spreadedFolderKeys', { required: true });
 // eslint-disable-next-line vue/no-setup-props-destructure
-const searchedItems = defineModel<Item[]>('searchedItems');
+const searchedItems = defineModel<MenuItem[]>('searchedItems');
 
 const getParentFolderKey = (selected: string) => props.items.filter(({ children }) => children?.some(({ key }) => key === selected)).at(0)?.key;
 watch(selectedKeys, () => {

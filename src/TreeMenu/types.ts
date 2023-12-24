@@ -1,12 +1,14 @@
 import { type MenuMode } from 'ant-design-vue/es/menu/src/interface';
+import { VNode } from 'vue';
 
-export interface Item {
+export interface MenuItem {
   key: string;
-  label?: string;
-  children?: Item[];
+  icon?: VNode;
+  label?: string | VNode;
+  children?: MenuItem[];
 }
 export interface Props {
-  items: Item[];
+  items: MenuItem[];
   mode?: MenuMode;
   /** filter only searched items */
   searchText?: string;
